@@ -43,7 +43,7 @@ export default function App() {
 
       {/* NAVBAR */}
       <nav className="fixed top-0 w-full flex justify-between items-center px-8 py-4 backdrop-blur bg-black/40 z-50">
-        <h1 className="text-sky-400 font-bold">Shravan</h1>
+        <h1 className="text-sky-400 font-bold">Shravan Bhosale</h1>
         <div className="space-x-6">
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
@@ -97,9 +97,15 @@ export default function App() {
 
       {/* RESUME */}
       <section className="py-16 text-center">
-        <a href="/Shravan_Bhosale_Resume.pdf" className="px-6 py-3 bg-sky-400 text-black rounded-full font-bold">
-          Download Resume
-        </a>
+        <a
+  href="/ShravanBhosale_InternshalaResume.pdf"
+  download
+  className="px-6 py-3 bg-blue-600 text-white rounded-lg"
+>
+  Download Resume
+</a>
+
+        
       </section>
 
       <footer className="py-6 text-center text-gray-400 bg-black/50">
