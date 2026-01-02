@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import { useRef } from "react";
 import emailjs from "emailjs-com";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
@@ -16,6 +17,8 @@ function Cube() {
 export default function App() {
   const [dark, setDark] = useState(true);
   const [repos, setRepos] = useState([]);
+  const form = useRef();
+
 
   // FETCH GITHUB PROJECTS
   useEffect(() => {
@@ -31,11 +34,17 @@ export default function App() {
     emailjs.sendForm(
       "Shravan26",
       "Shravan26",
-      e.target,
+      form.current,
       "uYatB774gQESKib-A"
-    ).then(() => alert("Message sent successfully!"));
-
-    e.target.reset();
+    )
+    .then(() => {
+      alert("Message Sent Successfully 🎉");
+      form.current.reset();
+    })
+    .catch((error) => {
+      console.log(error);
+      alert("Message failed — check console ❌");
+    });
   }
 
   return (
@@ -87,10 +96,10 @@ export default function App() {
       {/* CONTACT WITH EMAILJS */}
       <section id="contact" className="py-24 bg-black/30">
         <h2 className="text-center text-3xl font-bold mb-8">Contact Me</h2>
-        <form onSubmit={sendEmail} className="max-w-md mx-auto flex flex-col gap-4 px-4">
-          <input name="from_name" placeholder="Name" required className="p-2 rounded" />
-          <input name="from_email" placeholder="Email" required className="p-2 rounded" />
-          <textarea name="message" placeholder="Message" required className="p-2 rounded" />
+        <form ref={form} onSubmit={sendEmail} className="max-w-md mx-auto flex flex-col gap-4 px-4">
+          <input name="from_name" placeholder="Your Name" required className="p-2 rounded" />
+          <input name="from_email" placeholder="Your Email" required className="p-2 rounded" />
+          <textarea name="message" placeholder="Your Message" required className="p-2 rounded" />
           <button className="bg-sky-400 text-black py-2 rounded font-bold">Send Message</button>
         </form>
       </section>
