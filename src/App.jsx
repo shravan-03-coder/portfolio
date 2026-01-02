@@ -32,8 +32,8 @@ export default function App() {
     e.preventDefault();
 
     emailjs.sendForm(
-      "Shravan26",
-      "Shravan26",
+      "service_bd1xlel",
+      "template_x1a2b3",
       form.current,
       "uYatB774gQESKib-A"
     )
@@ -42,9 +42,10 @@ export default function App() {
       form.current.reset();
     })
     .catch((error) => {
-      console.log(error);
-      alert("Message failed — check console ❌");
-    });
+  console.log("EMAILJS ERROR DETAILS:", error);
+  alert(error?.text || "Email failed — see console");
+});
+
   }
 
   return (
