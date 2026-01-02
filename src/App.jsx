@@ -98,7 +98,7 @@ export default function App() {
       {/* RESUME */}
       <section className="py-16 text-center">
         <a
-  href="/shravanbhosale_internshalaresume.pdf"
+  href="/ShravanBhosale_InternshalaResume.pdf"
   download
   className="px-6 py-3 bg-blue-600 text-white rounded-lg"
 >
