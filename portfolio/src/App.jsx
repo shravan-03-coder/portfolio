@@ -108,8 +108,8 @@ export default function App() {
       {/* RESUME */}
       <section className="py-16 text-center">
         <a
-  href="/Shravan_Bhosale_Resume.pdf"
-  download
+  href="./Shravan_Bhosale_Resume.pdf"
+  download="Shravan_Bhosale_Resume.pdf"
   className="px-6 py-3 bg-blue-600 text-white rounded-lg"
 >
   Download Resume

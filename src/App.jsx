@@ -109,7 +109,7 @@ export default function App() {
             <a href="#projects" className="px-8 py-3.5 rounded-full bg-indigo-600 hover:bg-indigo-500 text-white font-medium transition-all shadow-[0_0_20px_rgba(79,70,229,0.3)] hover:shadow-[0_0_30px_rgba(79,70,229,0.5)] transform hover:-translate-y-1">
               View Work
             </a>
-            <a href="\Shravan_Bhosale_Resume .pdf" download className="px-8 py-3.5 rounded-full border border-slate-700 hover:border-slate-500 hover:bg-slate-800 text-white font-medium transition-all transform hover:-translate-y-1">
+            <a href="./Shravan_Bhosale_Resume.pdf" download="Shravan_Bhosale_Resume.pdf" className="px-8 py-3.5 rounded-full border border-slate-700 hover:border-slate-500 hover:bg-slate-800 text-white font-medium transition-all transform hover:-translate-y-1">
               Download CV
             </a>
           </motion.div>
